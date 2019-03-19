@@ -4,7 +4,9 @@ let classFirstCardClicked = "",
   firstReferenceCard = undefined,
   secondReferenceCard = undefined,
   matchesLimit = 8,
-  movesLimit = 16;
+  movesLimit = 16,
+  seconds = 0,
+  timer = undefined;
 
 $(document).ready(function() {
   let $ul = $(".deck");
@@ -32,6 +34,10 @@ function addCardClick() {
     let $self = $(this);
 
     count++;
+
+    if (movesLimit === 16) {
+      startTime();
+    }
 
     decrementMoves();
 
@@ -132,8 +138,32 @@ function controlOfHitsOrErrors(card) {
 
 function checkingTheNumberOfMatches() {
   if (matchesLimit === 0) {
+    endTime();
     alert("Parabéns, você ganhou esta partida!\n\nRecomeçando...");
 
     reloadPage();
+  }
+}
+
+function startTime() {
+  timer = setInterval(function() {
+    seconds++;
+  }, 1000);
+}
+
+function endTime() {
+  clearTimeout(timer);
+  timer = null;
+
+  if (seconds >= 0) {
+    const diff = {};
+
+    diff.hours = Math.floor((seconds / 3600) % 24);
+    diff.minutes = Math.floor((seconds / 60) % 60);
+    diff.seconds = Math.floor(seconds % 60);
+
+    let message = `Duração: ${diff.hours}h ${diff.minutes}m ${diff.seconds}s.`;
+    message = message.replace(/(?:0. )+/, "");
+    alert(message);
   }
 }
