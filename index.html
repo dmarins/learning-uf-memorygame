@@ -1,89 +1,97 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Jogo da Memória</title>
     <meta name="description" content="" />
-    <link rel="stylesheet prefetch"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
-    <link rel="stylesheet prefetch"
-          href="https://fonts.googleapis.com/css?family=Coda" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://fonts.googleapis.com/css?family=Coda"
+    />
     <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Jogo da Memória</h1>
-        </header>
+      <header>
+        <h1>Jogo da Memória</h1>
+      </header>
 
-        <section class="score-panel">
-            <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-            </ul>
-
-            <span class="moves">3</span> Tentativa(s)
-
-            <div class="restart">
-                <i class="fa fa-repeat"></i>
-            </div>
-        </section>
-
-        <ul class="deck">
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
+      <section class="score-panel">
+        <ul class="stars">
+          <li><i class="far fa-star"></i></li>
+          <li><i class="far fa-star"></i></li>
+          <li><i class="far fa-star"></i></li>
         </ul>
+
+        <span class="moves">16</span> Movimento(s)
+
+        <div class="restart" title="reiniciar a jogo">
+          <i class="fas fa-redo-alt"></i>
+        </div>
+      </section>
+
+      <ul class="deck">
+        <li class="card">
+          <i class="fas fa-gem"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-plane"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-anchor"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-bolt"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-cube"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-anchor"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-leaf"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-bicycle"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-gem"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-bomb"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-leaf"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-bomb"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-bolt"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-bicycle"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-plane"></i>
+        </li>
+        <li class="card">
+          <i class="fas fa-cube"></i>
+        </li>
+      </ul>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

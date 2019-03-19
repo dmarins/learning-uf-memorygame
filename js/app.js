@@ -4,7 +4,7 @@ let classFirstCardClicked = "",
   firstReferenceCard = undefined,
   secondReferenceCard = undefined,
   matchesLimit = 8,
-  attemptsLimit = 3;
+  movesLimit = 16;
 
 $(document).ready(function() {
   let $ul = $(".deck");
@@ -33,13 +33,14 @@ function addCardClick() {
 
     count++;
 
+    decrementMoves();
+
     persistsDataOfChoice($self);
 
     if (wasTheCardSelectedTwoTimes($self)) return;
 
     controlTheDisplayOfTheCardSymbol($self);
     controlOfHitsOrErrors($self);
-    checkingTheNumberOfAttempts();
     checkingTheNumberOfMatches();
   });
 }
@@ -62,15 +63,20 @@ function persistsDataOfChoice(card) {
   }
 }
 
-function controlOfTheNumberOfAttempts() {
-  let star = $(".stars")
+function decrementMoves() {
+  movesLimit--;
+  $(".moves").text(movesLimit);
+}
+
+function controlOfTheNumberOfMoves() {
+  let stars = $(".stars")
     .children()
-    .not(".used");
-  $(star[0]).addClass("used");
+    .children()
+    .not(".fas");
 
-  $(".moves").text(star.length - 1);
-
-  attemptsLimit--;
+  $(stars[0])
+    .removeClass("far")
+    .addClass("fas");
 }
 
 function wasTheCardSelectedTwoTimes(card) {
@@ -83,11 +89,7 @@ function wasTheCardSelectedTwoTimes(card) {
     classFirstCardClicked = "";
     classSecondCardClicked = "";
 
-    controlOfTheNumberOfAttempts();
-
     alert("Escolha errada! Você não pode usar o mesmo cartão 2 vezes.");
-
-    checkingTheNumberOfAttempts();
 
     return true;
   }
@@ -110,9 +112,9 @@ function controlOfHitsOrErrors(card) {
     count = 0;
 
     matchesLimit--;
-  } else if (count === 2) {
-    controlOfTheNumberOfAttempts();
 
+    controlOfTheNumberOfMoves();
+  } else if (count === 2) {
     firstReferenceCard.removeClass("open");
     firstReferenceCard.removeClass("show");
 
@@ -120,14 +122,6 @@ function controlOfHitsOrErrors(card) {
     secondReferenceCard.removeClass("show");
 
     count = 0;
-  }
-}
-
-function checkingTheNumberOfAttempts() {
-  if (attemptsLimit === 0) {
-    alert("Ah não, você perdeu o jogo!\n\nRecomeçando...");
-
-    reloadPage();
   }
 }
 
