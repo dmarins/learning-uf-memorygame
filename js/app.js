@@ -118,8 +118,13 @@ function controlOfHitsOrErrors(card) {
     firstReferenceCard.removeClass("open");
     firstReferenceCard.removeClass("show");
 
-    secondReferenceCard.removeClass("open");
-    secondReferenceCard.removeClass("show");
+    setTimeout(function() {
+      secondReferenceCard.removeClass("open");
+      secondReferenceCard.removeClass("show");
+    }, 600);
+
+    classFirstCardClicked = "";
+    classSecondCardClicked = "";
 
     count = 0;
   }
