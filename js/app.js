@@ -98,7 +98,11 @@ function wasTheCardSelectedTwoTimes(card) {
     classFirstCardClicked = "";
     classSecondCardClicked = "";
 
-    alert("Escolha errada! Você não pode usar o mesmo cartão 2 vezes.");
+    swal(
+      "Escolha errada!",
+      "Você não pode usar o mesmo cartão 2 vezes.",
+      "warning"
+    );
 
     return true;
   }
@@ -141,10 +145,22 @@ function controlOfHitsOrErrors(card) {
 
 function checkingTheNumberOfMatches() {
   if (matchesLimit === 0) {
-    endTime();
-    alert("Parabéns, você ganhou esta partida!\n\nRecomeçando...");
-
-    reloadPage();
+    let message = endTime();
+    swal({
+      title: "Parabéns!",
+      text:
+        "Você ganhou esta partida!\n\n" +
+        message +
+        "\n\nClique em Ok para recomeçar.",
+      icon: "success",
+      buttons: ["Não", "Sim"]
+    }).then(restart => {
+      if (restart) {
+        reloadPage();
+      } else {
+        return;
+      }
+    });
   }
 }
 
@@ -167,6 +183,8 @@ function endTime() {
 
     let message = `Duração: ${diff.hours}h ${diff.minutes}m ${diff.seconds}s.`;
     message = message.replace(/(?:0. )+/, "");
-    alert(message);
+    return message;
   }
+
+  return "";
 }
