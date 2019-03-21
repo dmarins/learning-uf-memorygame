@@ -6,7 +6,7 @@ let classFirstCardClicked = "",
   firstReferenceCard = undefined,
   secondReferenceCard = undefined,
   matchesLimit = 8,
-  movesLimit = 16,
+  movesLimit = 0,
   seconds = 0,
   timer = undefined;
 
@@ -37,11 +37,11 @@ function addCardClick() {
 
     count++;
 
-    if (movesLimit === 16) {
+    if (movesLimit === 0) {
       startTime();
     }
 
-    decrementMoves();
+    incrementMoves();
 
     persistsDataOfChoice($self);
 
@@ -71,8 +71,8 @@ function persistsDataOfChoice(card) {
   }
 }
 
-function decrementMoves() {
-  movesLimit--;
+function incrementMoves() {
+  movesLimit++;
   $(".moves").text(movesLimit);
 }
 
