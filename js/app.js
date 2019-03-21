@@ -1,3 +1,5 @@
+"use strict";
+
 let classFirstCardClicked = "",
   classSecondCardClicked = "",
   count = 0,
