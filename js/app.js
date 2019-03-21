@@ -32,6 +32,7 @@ function addRestartClick() {
 }
 
 function addCardClick() {
+  $(".card").off();
   $(".card").on("click", function() {
     let $self = $(this);
 
@@ -129,7 +130,7 @@ function controlOfHitsOrErrors(card) {
     setTimeout(function() {
       secondReferenceCard.removeClass("open");
       secondReferenceCard.removeClass("show");
-    }, 600);
+    }, 300);
 
     classFirstCardClicked = "";
     classSecondCardClicked = "";
