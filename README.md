@@ -20,9 +20,9 @@ Cada turno:
 
 A classificação das estrelas depende do número de movimentos:
 
-- :star::star::star: Se os movimentos estiverem entre 8 e 11.
-- :star::star: Se os movimentos estiverem entre 12 e 19.
-- :star: Se os movimentos forem 20 ou mais.
+- :star::star::star: Se o número de movimentos estiver entre 8 e 11.
+- :star::star: Se o número de movimentos estiver entre 12 e 19.
+- :star: Se o número de movimentos for 20 ou mais.
 
 O jogo termina quando todas as cartas forem correspondidas corretamente.
 O jogador pode reiniciar o jogo a qualquer momento clicando no ícone de reinicialização.
