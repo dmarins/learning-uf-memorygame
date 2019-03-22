@@ -4,15 +4,14 @@
 
 Projeto Final do Nanodegree de Front-End da Udacity
 
-- Prévia do jogo
+## Prévia do jogo
 
 <img src="img/example.png" alt="Visualização do jogo">
 
-## Como o jogo funciona
+## Como o jogo funciona?
 
-O tabuleiro do jogo é composto por dezesseis "cartas" dispostas em uma grade. O baralho é composto por oito pares diferentes de cartas, cada uma com
-símbolos diferentes de um lado. As cartas são dispostas aleatoriamente na grade com o símbolo voltado para baixo. As regras de jogo são muito
-simples: clique em dois cartões escondidos de cada vez para localizar os que combinam!
+O tabuleiro do jogo é composto por dezesseis "cartas" dispostas em uma grade. O baralho é composto por oito pares diferentes de cartas, cada uma com símbolos diferentes de um lado. As cartas são dispostas aleatoriamente na grade com o símbolo voltado para baixo.
+As regras do jogo são muito simples: clique em dois cartões escondidos (um de cada vez) para localizar os que combinam!
 
 Cada turno:
 
