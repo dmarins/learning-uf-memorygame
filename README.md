@@ -6,7 +6,7 @@ Projeto Final do Nanodegree de Front-End da Udacity
 
 <img src="img/example.png" alt="Visualização do jogo">
 
-## Como o jogo funciona?
+## Como funciona?
 
 O tabuleiro do jogo é composto por dezesseis "cartas" dispostas em uma grade. O baralho é composto por oito pares diferentes de cartas, cada uma com símbolos diferentes de um lado. As cartas são dispostas aleatoriamente na grade com o símbolo voltado para baixo.
 As regras do jogo são muito simples: clique em dois cartões escondidos (um de cada vez) para localizar os que combinam!
@@ -26,3 +26,9 @@ A classificação das estrelas depende do número de movimentos:
 
 O jogo termina quando todas as cartas forem correspondidas corretamente.
 O jogador pode reiniciar o jogo a qualquer momento clicando no ícone de reinicialização.
+
+## Como executar?
+
+- Efetue o download do projeto ou clone o repositório no endereço 'https://github.com/dmarins/learning-uf-memorygame.git'.
+- Abra o arquivo 'index.html' no seu navegador favorito e se divirta
+- Não há necessidade de baixar dependências, pois o projeto utiliza libs hospedadas em CDNs.
