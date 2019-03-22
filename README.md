@@ -29,6 +29,6 @@ O jogador pode reiniciar o jogo a qualquer momento clicando no ícone de reinici
 
 ## Como executar?
 
-- Efetue o download do projeto ou clone o repositório no endereço 'https://github.com/dmarins/learning-uf-memorygame.git'.
-- Abra o arquivo 'index.html' no seu navegador favorito e se divirta
+- Efetue o download do projeto ou clone o repositório no endereço **https://github.com/dmarins/learning-uf-memorygame.git**.
+- Abra o arquivo **index.html** no seu navegador favorito e se divirta!
 - Não há necessidade de baixar dependências, pois o projeto utiliza libs hospedadas em CDNs.
