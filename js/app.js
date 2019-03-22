@@ -6,7 +6,7 @@ let classFirstCardClicked = "",
   firstReferenceCard = undefined,
   secondReferenceCard = undefined,
   matchesLimit = 8,
-  movesLimit = 0,
+  moves = 0,
   seconds = 0,
   timer = undefined;
 
@@ -38,11 +38,12 @@ function addCardClick() {
 
     count++;
 
-    if (movesLimit === 0) {
+    if (moves === 0) {
       startTime();
     }
 
     incrementMoves();
+    controlsTheStarRanking();
 
     persistsDataOfChoice($self);
 
@@ -73,19 +74,25 @@ function persistsDataOfChoice(card) {
 }
 
 function incrementMoves() {
-  movesLimit++;
-  $(".moves").text(movesLimit);
+  moves++;
+  $(".moves").text(moves);
 }
 
-function controlOfTheNumberOfMoves() {
+function controlsTheStarRanking() {
   let stars = $(".stars")
     .children()
     .children()
-    .not(".fas");
+    .not(".far");
 
-  $(stars[0])
-    .removeClass("far")
-    .addClass("fas");
+  if (moves === 17) {
+    $(stars[0])
+      .removeClass("fas")
+      .addClass("far");
+  } else if (moves === 20) {
+    $(stars[0])
+      .removeClass("fas")
+      .addClass("far");
+  }
 }
 
 function wasTheCardSelectedTwoTimes(card) {
@@ -125,8 +132,6 @@ function controlOfHitsOrErrors(card) {
     count = 0;
 
     matchesLimit--;
-
-    controlOfTheNumberOfMoves();
   } else if (count === 2) {
     firstReferenceCard.removeClass("open");
     firstReferenceCard.removeClass("show");
