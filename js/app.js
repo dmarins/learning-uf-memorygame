@@ -45,10 +45,12 @@ function addCardClick() {
     incrementMoves();
     controlsTheStarRanking();
 
+    // Persiste em memória dados sobre o ícone e a referência do cartão clicado
     persistsDataOfChoice($self);
 
     if (wasTheCardSelectedTwoTimes($self)) return;
 
+    // Controla se a carta deve ser virada ou desvirada
     controlTheDisplayOfTheCardSymbol($self);
     controlOfHitsOrErrors($self);
     checkingTheNumberOfMatches();
@@ -136,6 +138,7 @@ function controlOfHitsOrErrors(card) {
     firstReferenceCard.removeClass("open");
     firstReferenceCard.removeClass("show");
 
+    // Adicionando um tempo para que o usuário consiga visualizar a segunda carta errada
     setTimeout(function() {
       secondReferenceCard.removeClass("open");
       secondReferenceCard.removeClass("show");
