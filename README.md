@@ -20,7 +20,7 @@ Cada turno:
 
 A classificação das estrelas depende do número de movimentos:
 
-- :star::star::star: Se o número de movimentos for igual a 16.
+- :star::star::star: Se o número de movimentos estiver entre 0 e 16.
 - :star::star: Se o número de movimentos estiver entre 17 e 19.
 - :star: Se o número de movimentos for 20 ou mais.
 
