@@ -1,7 +1,5 @@
 # Jogo da Memória
 
-## Geral
-
 Projeto Final do Nanodegree de Front-End da Udacity
 
 ## Prévia do jogo
