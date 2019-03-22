@@ -179,6 +179,10 @@ function checkingTheNumberOfMatches() {
 function startTime() {
   timer = setInterval(function() {
     seconds++;
+    $("#seg").html(Math.floor(seconds % 60));
+    if (Math.floor(seconds % 60) === 0) {
+      $("#min").html(Math.floor((seconds / 60) % 60));
+    }
   }, 1000);
 }
 
