@@ -149,12 +149,19 @@ function controlOfHitsOrErrors(card) {
 }
 
 function checkingTheNumberOfMatches() {
+  let stars = $(".stars")
+    .children()
+    .children()
+    .not(".far");
+
   if (matchesLimit === 0) {
     let message = endTime();
     swal({
       title: "Parabéns!",
       text:
-        "Você ganhou esta partida!\n\n" +
+        "Você ganhou esta partida com " +
+        stars.length +
+        " estrela(s)!\n\n" +
         message +
         "\n\nClique em Ok para recomeçar.",
       icon: "success",
